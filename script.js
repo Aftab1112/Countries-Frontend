@@ -14,7 +14,7 @@ async function fetchCountries() {
       <h3 class="card-tittle">${country.name.common}</h3>
       <p><b>Population: </b>${country.population.toLocaleString("en-IN")}</p>
       <p><b>Region: </b>${country.region}</p>
-      <p><b>Capital: </b>${country.capital}</p>
+      <p><b>Capital: </b>${country.capital?.[0]}</p>
     </div>
 `;
 
