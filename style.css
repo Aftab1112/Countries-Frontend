@@ -28,10 +28,10 @@ main {
   margin-inline: auto;
 }
 
-i {
+/* i {
   transform: rotate(-18deg);
   font-size: 17px;
-}
+} */
 
 .countries-container {
   max-width: 1200px;
@@ -79,4 +79,18 @@ a {
 .card-tittle {
   font-size: 24px;
   margin-block: 12px;
+}
+
+@media (max-width: 768px) {
+  .countries-container {
+    justify-content: center;
+  }
+
+  .tittle {
+    font-size: 16px;
+  }
+
+  .header-content p {
+    font-size: 16px;
+  }
 }
