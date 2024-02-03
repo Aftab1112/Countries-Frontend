@@ -4,7 +4,6 @@ async function fetchCountries() {
   const response = await fetch("https://restcountries.com/v3.1/all");
   const data = await response.json();
   data.forEach((country) => {
-    console.log(country);
     const countryCard = document.createElement("a");
     countryCard.classList.add("country-card");
     countryCard.href = `country.html?name=${country.name.common}`;

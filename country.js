@@ -16,7 +16,6 @@ async function fetchCountry() {
     `https://restcountries.com/v3.1/name/${countryName}?fullText=true`
   );
   const [country] = await response.json();
-  // console.log(country);
 
   flagImage.src = country.flags.svg;
   countryNameHeading.innerHTML = country.name.common;
@@ -53,17 +52,17 @@ async function fetchCountry() {
 
   if (country.borders) {
     country.borders.forEach((border) => {
-      async function borderCountries() {
+      async function borderCountriesAll() {
         const response = await fetch(
           `https://restcountries.com/v3.1/alpha/${border}`
         );
         const [borderCountry] = await response.json();
-        // console.log(borderCountry);
         const borderCountryTag = document.createElement("a");
         borderCountryTag.innerText = borderCountry.name.common;
-        console.log(borderCountryTag);
+        borderCountryTag.href = `country.html?name=${borderCountry.name.common}`;
+        borderCountries.append(borderCountryTag);
       }
-      borderCountries();
+      borderCountriesAll();
     });
   }
 }
