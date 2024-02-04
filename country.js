@@ -10,6 +10,7 @@ const topLevelDomain = document.querySelector(".top-level-domain");
 const currencies = document.querySelector(".currencies");
 const languages = document.querySelector(".languages");
 const borderCountries = document.querySelector(".border-countries");
+const themeChanger = document.querySelector(".theme-changer");
 
 async function fetchCountry() {
   const response = await fetch(
@@ -68,3 +69,7 @@ async function fetchCountry() {
 }
 
 fetchCountry();
+
+themeChanger.addEventListener("click", () => {
+  document.body.classList.toggle("dark");
+});

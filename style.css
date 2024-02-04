@@ -3,8 +3,19 @@
 }
 
 body {
+  --background-color: white;
+  --text-color: black;
+  --elements-color: white;
   margin: 0;
   font-family: "Nunito", sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+body.dark {
+  --background-color: hsl(207, 26%, 17%);
+  --text-color: white;
+  --elements-color: hsl(209, 23%, 22%);
 }
 
 main {
@@ -18,6 +29,7 @@ main {
 .header-container {
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
   padding-inline: 24px;
+  background-color: var(--elements-color);
 }
 
 .header-content {
@@ -28,10 +40,9 @@ main {
   margin-inline: auto;
 }
 
-/* i {
-  transform: rotate(-18deg);
-  font-size: 17px;
-} */
+.theme-changer {
+  cursor: pointer;
+}
 
 .countries-container {
   max-width: 1200px;
@@ -52,6 +63,7 @@ main {
   cursor: pointer;
   box-shadow: 0 0 8px 0px rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease-in-out;
+  background-color: var(--elements-color);
 }
 
 a {
@@ -101,6 +113,8 @@ a {
   letter-spacing: 1px;
   overflow: hidden;
   transition: 0.5s;
+  background-color: var(--elements-color);
+  color: var(--text-color);
 }
 
 .search-container input {
@@ -108,6 +122,8 @@ a {
   border: none;
   outline: none;
   padding: 16px;
+  background-color: inherit;
+  color: inherit;
 }
 
 .filter-by-region {
@@ -115,11 +131,12 @@ a {
   cursor: pointer;
   width: 250px;
   padding: 16px;
-
   border: none;
   outline: none;
   box-shadow: 0 0 8px 0px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
+  background-color: var(--elements-color);
+  color: var(--text-color);
 }
 
 @media (max-width: 768px) {
