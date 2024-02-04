@@ -35,7 +35,6 @@ main {
 
 .countries-container {
   max-width: 1200px;
-  margin-inline: auto;
   margin-top: 16px;
   display: flex;
   gap: 64px;
@@ -81,6 +80,41 @@ a {
   margin-block: 12px;
 }
 
+.search-filter-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 16px;
+  margin-bottom: 48px;
+  gap: 24px;
+}
+
+.search-container {
+  box-shadow: 0 0 8px 0px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  padding-left: 24px;
+  max-width: 350px;
+  width: 100%;
+  color: #999;
+  letter-spacing: 1px;
+  overflow: hidden;
+}
+
+.search-container input {
+  border: none;
+  outline: none;
+  padding: 16px;
+}
+
+.filter-by-region {
+  cursor: pointer;
+  width: 250px;
+  padding: 16px;
+  border: none;
+  outline: none;
+  box-shadow: 0 0 8px 0px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+}
+
 @media (max-width: 768px) {
   .countries-container {
     justify-content: center;
@@ -92,5 +126,9 @@ a {
 
   .header-content p {
     font-size: 16px;
+  }
+
+  .search-filter-container {
+    flex-direction: column;
   }
 }
