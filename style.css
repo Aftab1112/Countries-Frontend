@@ -100,6 +100,7 @@ a {
   color: #999;
   letter-spacing: 1px;
   overflow: hidden;
+  transition: 0.5s;
 }
 
 .search-container input {
@@ -110,9 +111,11 @@ a {
 }
 
 .filter-by-region {
+  letter-spacing: 1px;
   cursor: pointer;
   width: 250px;
   padding: 16px;
+
   border: none;
   outline: none;
   box-shadow: 0 0 8px 0px rgba(0, 0, 0, 0.15);
